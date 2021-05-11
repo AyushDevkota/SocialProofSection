@@ -1,0 +1,155 @@
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 5em auto 0;
+}
+
+.flexbox {
+  display: flex;
+  margin-bottom: 2em;
+  justify-content: space-between;
+}
+
+.flex-item-1 {
+  flex-basis: 40%;
+}
+
+.flex-item-1 h1 {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+
+.flex-item-1 p {
+  color: var(--dark-grayish-magenta);
+  font-weight: 500;
+}
+
+.flex-item-2 {
+  flex-basis: 50%;
+}
+
+.item {
+  background-color: var(--light-grayish-magenta);
+  margin: 0 0 2em;
+  padding: 0.75em 1em;
+  border-radius: 0.4em;
+  width: 28em;
+}
+
+.item p {
+  display: inline;
+  margin-left: 2.25em;
+  font-size: 13px;
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+}
+
+.fa-star {
+  color: #ffc107;
+  margin-right: 0.3em;
+}
+
+.second-child {
+  margin-left: 2.5em;
+}
+
+.third-child {
+  margin-left: 5em;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: var(--very-dark-magenta);
+  margin: 0.7em 0;
+  padding: 4em 4em 2em;
+  color: var(--white);
+  font-size: 12px;
+  border-radius: 1em;
+}
+
+.card .flexbox {
+  justify-content: flex-start;
+}
+
+.info {
+  margin-left: 2.5em;
+}
+
+.sub-title {
+  color: var(--soft-pink);
+}
+
+img {
+  border-radius: 50%;
+  height: 3em;
+}
+
+.first-item,
+.second-item,
+.third-item {
+  flex-basis: 31%;
+}
+
+.second-item {
+  margin-top: 1em;
+}
+
+.third-item {
+  margin-top: 2em;
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 90%;
+  }
+  .flexbox {
+    display: inline;
+  }
+  .flex-item-1 {
+    margin-bottom: 1em;
+  }
+  .flex-item-1 h1,
+  .flex-item-1 p {
+    text-align: center;
+  }
+  .item {
+    width: 100%;
+    margin: 1em 0;
+    text-align: center;
+  }
+  .item p {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+  .card .flexbox {
+    display: flex;
+  }
+}
